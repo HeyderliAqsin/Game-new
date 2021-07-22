@@ -1,0 +1,57 @@
+body{
+    background: url(../img/2Xym.gif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.rainer{
+    position: absolute;
+    animation: Ani 1s forwards;
+}
+.basket{
+    position: absolute;
+    bottom: 20px;
+    left: 280px;
+    .scsImg{
+        position: absolute;
+        left: 10px;
+        top: -30px;
+    }
+
+}
+.score{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    h3{
+        color: #fff;
+    }
+   
+    
+}
+.box{
+    width: 200px;
+    height: 80vh;
+    position: relative;
+    z-index: 1;
+    .feeding{
+        position: absolute;
+        top: 70px;
+        left: 25%;
+        z-index: -1;
+        transition: 2s ease-in-out;
+        &.feed-active{
+            animation: feedAni 1s ease-in-out forwards;
+            transform: rotateY(0);
+        }
+    }
+}
+@keyframes feedAni {
+    from{
+        top: 50px;
+    }to{
+        top: 105%;
+        display: none;
+    }
+}
